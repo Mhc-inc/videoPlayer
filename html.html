@@ -1,0 +1,15 @@
+<style>
+  #myVideo {
+    border: 1px solid black;
+  }
+  button {
+    margin: 5px;
+  }
+</style>
+<video id="myVideo" width="640" height="360" autoplay controls loop muted>
+  <source src="video.mp4" type="video/mp4">
+  <button onclick="myVideo.play()">播放</button>
+  <button onclick="myVideo.pause()">暂停</button>
+  <input type="range" min="0" max="1" step="0.1" value="1" oninput="myVideo.volume=this.value">
+  <button onclick="myVideo.requestFullscreen()">全屏</button>
+</video>
